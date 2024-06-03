@@ -12,10 +12,6 @@ Check out the website [here](https://www.mnmtaxilb.com/).
 
 ### Home Page
 
-![Home Page](images/homepage.png)
+![Home Page](docs/homepage-design.jpeg)
 
 # [Documentation PDF](docs/documentation.pdf)
-
-[Documentation PDF](docs/documentation.pdf)
-
-> > > > > > > 17f0941bc2e29d00cba3602e79aeb265a44f06c2
