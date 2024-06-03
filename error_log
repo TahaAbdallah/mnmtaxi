@@ -1,0 +1,30 @@
+[26-Jun-2023 11:46:37 UTC] PHP Warning:  require(/home/mnmtaxil/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/mnmtaxil/public_html/index.php on line 34
+[26-Jun-2023 11:46:37 UTC] PHP Warning:  require(/home/mnmtaxil/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/mnmtaxil/public_html/index.php on line 34
+[26-Jun-2023 11:46:37 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/mnmtaxil/public_html/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/mnmtaxil/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/mnmtaxil/public_html/index.php on line 34
+[26-Jun-2023 11:46:52 UTC] PHP Warning:  require(/home/mnmtaxil/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/mnmtaxil/public_html/index.php on line 34
+[26-Jun-2023 11:46:52 UTC] PHP Warning:  require(/home/mnmtaxil/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/mnmtaxil/public_html/index.php on line 34
+[26-Jun-2023 11:46:52 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/mnmtaxil/public_html/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/mnmtaxil/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/mnmtaxil/public_html/index.php on line 34
+[26-Jun-2023 11:46:54 UTC] PHP Warning:  require(/home/mnmtaxil/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/mnmtaxil/public_html/index.php on line 34
+[26-Jun-2023 11:46:54 UTC] PHP Warning:  require(/home/mnmtaxil/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/mnmtaxil/public_html/index.php on line 34
+[26-Jun-2023 11:46:54 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/mnmtaxil/public_html/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/mnmtaxil/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/mnmtaxil/public_html/index.php on line 34
+[26-Jun-2023 11:46:58 UTC] PHP Warning:  require(/home/mnmtaxil/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/mnmtaxil/public_html/index.php on line 34
+[26-Jun-2023 11:46:58 UTC] PHP Warning:  require(/home/mnmtaxil/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/mnmtaxil/public_html/index.php on line 34
+[26-Jun-2023 11:46:58 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/mnmtaxil/public_html/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/mnmtaxil/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/mnmtaxil/public_html/index.php on line 34
+[26-Jun-2023 11:47:03 UTC] PHP Warning:  require(/home/mnmtaxil/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/mnmtaxil/public_html/index.php on line 34
+[26-Jun-2023 11:47:03 UTC] PHP Warning:  require(/home/mnmtaxil/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/mnmtaxil/public_html/index.php on line 34
+[26-Jun-2023 11:47:03 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/mnmtaxil/public_html/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/mnmtaxil/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/mnmtaxil/public_html/index.php on line 34

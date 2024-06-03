@@ -1,0 +1,2150 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&family=Viga&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Viga&display=swap');
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0 !important;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden !important;
+}
+
+
+/* ----------------------------------------------------------------------- */
+
+#active {
+    color: #DD001B;
+}
+
+/* The Overlay (background) */
+.overlay {
+    display: none;
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */
+    height: 100%;
+    width: 0;
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    right: 0;
+    top: 0;
+    background-color: #272727;
+    /* Black fallback color */
+    /* background-color: rgba(156, 39, 39, 0.9); */
+    /* Black w/opacity */
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+    position: relative;
+    top: 25%;
+    /* 25% from the top */
+    width: 100%;
+    /* 100% width */
+    text-align: center;
+    /* Centered text/links */
+    margin-top: 30px;
+    /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+    margin: 35px 0px;
+    font-family: 'Raleway', sans-serif;
+    color: #ffff;
+    text-decoration: none;
+    display: block;
+    /* Display block instead of inline */
+    transition: 0.3s;
+    /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover,
+.overlay a:focus {
+    color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+
+    .overlay a {
+        font-size: 20px
+    }
+
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+
+
+/* ----------------------------------------------------------------------- */
+
+
+
+/* TOP NAV  */
+nav {
+    font-family: 'Dosis', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: #F0F0F0;
+}
+
+.topNavContent {
+    padding: 0px 95px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.topNavContent img {
+    margin-right: 5px;
+}
+
+.topNavContent a,
+p {
+    margin-right: 25px;
+    color: #272727;
+    text-decoration: none;
+    transition: 400ms;
+}
+
+.topNavContent a:hover,
+.topNavContent p:hover {
+    color: #DD001B;
+}
+
+.topNavContent p:hover {
+    cursor: default;
+}
+
+.mobileSecondNav {
+    display: none;
+}
+
+/* MAIN NAV */
+.mainNav {
+    font-family: 'Dosis', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: #272727;
+}
+
+.mainNavBurger {
+    display: none;
+}
+
+.mainNavContent {
+    padding: 10px 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between !important;
+}
+
+.mainNavLinks a {
+    margin-right: 25px;
+    font-family: 'Raleway', sans-serif;
+    color: #ffff;
+    text-decoration: none;
+    transition: 400ms;
+}
+
+.mainNavLinks a:hover {
+    color: #DD001B;
+}
+
+#home {
+    background-color: #DD001B;
+    padding: 7px;
+    border-radius: 40px;
+}
+
+#home:hover {
+    color: #ffff;
+}
+
+/* Langin Page */
+
+.landingPageContainer {
+    background-color: #F0F0F0;
+}
+
+.landingPage {
+    padding: 0px 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.landingPage img {
+    width: 50%;
+    margin-bottom: 5px;
+}
+
+.landingPage h1 {
+    font-family: 'raleway';
+    font-size: 40px;
+    font-weight: 800;
+    color: #DD001B;
+    margin: 30px 0px 5px 0px !important;
+}
+
+.landingPage span {
+    color: #272727;
+}
+
+.landingPage h2 {
+    font-family: 'raleway';
+    font-size: 40px;
+    font-weight: 600;
+    color: #DD001B;
+    margin-bottom: 5px !important;
+}
+
+.landingPage a {
+    font-family: 'raleway';
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffff;
+    background-color: #DD001B;
+    padding: 10px 20px;
+    border-radius: 40px;
+    text-decoration: none;
+    transition: 400ms;
+}
+
+.landingPage a:hover {
+    font-size: 23px;
+}
+
+.landingPageHr {
+    padding: 0 120px;
+}
+
+.landingPageHr hr {
+    background: #272727;
+    height: 3px;
+    margin: 30px 0px !important;
+}
+
+
+
+/* OUR SERVICES */
+
+.ourServicesDataImgcontainer {
+    width: 100%;
+}
+
+.ourServicesDataImgcontainer img {
+    width: 500px;
+    height: 250px;
+    margin-bottom: 10px;
+}
+
+.servicetest {
+    text-align: center;
+}
+
+/* .ourServicesContainer {
+    padding: 0px 70px;
+} */
+
+.ourServicesContainer h3 {
+    font-family: 'raleway';
+    font-size: 35px;
+    font-weight: 700;
+    color: #DD001B;
+    margin: 30px 0px !important;
+    text-align: center;
+}
+
+.ourServicesDataContainer {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 30px;
+}
+
+.ourServicesData {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 50px;
+}
+
+
+.ourServicesData p {
+    font-family: 'raleway';
+    color: #272727;
+    font-weight: 500;
+    margin: 0px;
+    margin-bottom: 10px;
+}
+
+.ourServicesData span {
+    font-family: 'raleway';
+    font-weight: 500;
+    color: #DD001B;
+    font-size: 16px;
+}
+
+.carpoolService {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+#carpoolTitle {
+    font-family: 'raleway';
+    font-size: 35px;
+    font-weight: 700;
+    color: #DD001B;
+    margin: 30px 0px !important;
+    text-align: center;
+}
+
+.carpoolService img {
+    width: 100%;
+}
+
+.carpoolService p {
+    margin: 0px !important;
+    font-size: 20px;
+    font-family: 'raleway';
+    color: #272727;
+    font-weight: 500;
+}
+
+.carpoolingSpan1 {
+    font-weight: bold;
+}
+
+.carpoolingSpan2 {
+    color: #DD001B;
+}
+
+.carpoolingSpan3 {
+    color: #1c9010;
+}
+
+#carpoolGetInTouch {
+    margin-top: 25px !important;
+    margin-bottom: 25px !important;
+    color: #DD001B;
+    font-size: 25px;
+}
+
+.carpoolService a {
+    font-family: 'raleway';
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffff;
+    background-color: #DD001B;
+    padding: 10px 20px;
+    border-radius: 40px;
+    text-decoration: none;
+    transition: 400ms;
+}
+
+.carpoolService a:hover {
+    font-size: 18px;
+}
+
+
+.goComeBackContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.goComeBackText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+}
+
+.goBackSched {
+    text-align: center;
+}
+
+.dateCont input {
+    margin: 10px 0px;
+}
+
+.dateTimeContainer input {
+    margin: 10px 0px;
+}
+
+#goComeBackTitle {
+    font-family: 'raleway';
+    font-size: 35px;
+    font-weight: 700;
+    color: #DD001B;
+    text-align: center;
+    margin: 15px 0px;
+}
+
+.goComeBackImg {
+    text-align: center;
+}
+
+.goComeBackImg img {
+    width: 650px;
+    height: 250px;
+}
+
+.goComeBackService {
+    padding: 10px;
+}
+
+.goComeBackText p {
+    font-size: 20px;
+    font-family: 'raleway';
+    color: #272727;
+    font-weight: 500;
+}
+
+.goComeBackTextAr p {
+    font-size: 20px;
+    font-family: 'raleway';
+    color: #272727;
+    font-weight: 500;
+    margin: 0;
+    text-align: right;
+}
+
+
+.chooseDay {
+    margin: 3px !important;
+    font-size: 20px;
+    font-family: 'raleway';
+    color: #272727;
+    font-weight: 500;
+}
+
+input[type=time]:active {
+    background-color: red;
+}
+
+.goComeBackBtnMob {
+    display: none;
+    margin-top: 15px;
+}
+
+.goComeBackBtn {
+    font-family: 'raleway';
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffff;
+    background-color: #DD001B;
+    padding: 7px 14px;
+    border-radius: 40px;
+    text-decoration: none;
+    transition: 400ms;
+    cursor: pointer;
+    margin: 10px 0px;
+    border: none;
+    text-align: center;
+    width: fit-content;
+}
+
+.goComeBackBtn:hover {
+    font-size: 18px;
+}
+
+
+.whatsappSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 70px;
+    text-align: center;
+}
+
+#whatsappSectionTitle {
+    font-family: 'raleway';
+    font-size: 35px;
+    font-weight: 700;
+    color: #DD001B;
+    text-align: left;
+    margin: 0px !important;
+}
+
+.whatsappSection p {
+    font-size: 20px;
+    font-family: 'raleway';
+    color: #272727;
+    font-weight: 500;
+}
+
+.whatsappSectionBtn {
+    font-family: 'raleway';
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffff;
+    background-color: #DD001B;
+    padding: 7px 14px;
+    border-radius: 40px;
+    text-decoration: none;
+    transition: 400ms;
+    cursor: pointer;
+    margin: 10px 0px;
+    border: none;
+    text-align: center;
+    width: fit-content;
+}
+
+/* WHAT WE OFFER */
+
+.whatWeOfferContainer {
+    background-color: #F0F0F0;
+}
+
+.whatWeOfferContent {
+    padding: 50px 120px;
+    text-align: center;
+}
+
+.whatWeOfferContent h4 {
+    margin: 0px !important;
+    font-family: 'raleway';
+    font-size: 25px;
+    font-weight: 500;
+    color: #DD001B;
+    margin-bottom: 30px !important;
+}
+
+.whatWeOfferContent p {
+    margin: 0px !important;
+    font-family: 'raleway';
+    font-size: 16px;
+    font-weight: 400;
+    color: #272727;
+}
+
+
+
+/* APP SECTION */
+
+.appContent {
+    padding: 30px 120px;
+}
+
+.appContentTitle {
+    font-family: 'raleway';
+    font-size: 20px;
+    color: #DD001B;
+    font-weight: 700;
+    text-align: center;
+}
+
+.appContentApplication {
+    display: flex;
+    justify-content: center;
+}
+
+.appContentApplicationLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #272727;
+    padding: 120px 30px;
+    border: 2PX solid #DD001B;
+}
+
+.appContentApplicationLeft img {
+    width: 200PX;
+}
+
+.appContentApplicationLeft a {
+    width: fit-content
+}
+
+.appContentApplicationLeft p {
+    font-family: 'raleway';
+    font-size: 25px;
+    color: #ffff;
+    font-weight: 700;
+    text-align: center;
+}
+
+.appContentApplicationRight {
+    border: 3px solid #272727;
+}
+
+.appContentApplicationRight img {
+    height: 550px;
+}
+
+
+
+/* MAIN FEATURES SECTION */
+
+.mainFeaturesContent {
+    padding: 0px 120px 50px;
+    margin: 30px 0px;
+}
+
+.mainFeaturesContent h4 {
+    margin: 0px !important;
+    font-family: 'raleway';
+    font-size: 25px;
+    font-weight: 500;
+    color: #272727;
+    text-align: center;
+    /* margin-bottom: 30px !important; */
+}
+
+
+.mainFeaturesContent h3 {
+    font-family: 'raleway';
+    font-size: 35px;
+    font-weight: 700;
+    color: #DD001B;
+    margin: 0px 0px 25px 0px !important;
+    text-align: center;
+}
+
+.mainFeaturesBigContent {
+    display: flex;
+    align-items: center;
+}
+
+.mainFeaturesBigContentLeft img {
+    width: 85%;
+}
+
+.mainFeaturesBigContentRight {
+    text-align: center;
+}
+
+.mainFeaturesBigContentRightContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainFeaturesBigContentRightContent img {
+    margin-right: 5px;
+}
+
+.mainFeaturesBigContentRightContentTitle {
+    font-family: 'raleway';
+    font-size: 16px;
+    font-weight: 600;
+    color: #DD001B;
+}
+
+.mainFeaturesBigContentRightContentParag {
+    font-family: 'raleway';
+    font-size: 16px;
+    font-weight: 500;
+    color: #272727;
+    margin-bottom: 25px;
+}
+
+
+/* FINAL IMAGE  */
+
+.finalImg img {
+    width: 100%;
+    height: 400px;
+}
+
+
+/* ASSISTANCE SECTION  */
+
+.assistanceSectionContainer {
+    padding: 50px 120px;
+    background-color: #F0F0F0;
+}
+
+.assistanceSectionContent {
+    display: flex;
+    justify-content: center;
+}
+
+.assistanceSectionContent img {
+    width: 25px;
+    height: 25px;
+}
+
+.assistanceSectionContent h3 {
+    font-family: 'raleway';
+    font-size: 35px;
+    font-weight: 700;
+    color: #DD001B;
+    margin: 0px 0px 15px 0px !important;
+    text-align: center;
+}
+
+.assistanceSectionContainer p {
+    margin: 0px !important;
+    font-family: 'raleway';
+    font-size: 16px;
+    font-weight: 400;
+    color: #272727;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.assistanceSectionContainer hr {
+    border: 1.5px solid #DD001B;
+}
+
+
+
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 50px 120px;
+    background-color: #272727;
+}
+
+footer p {
+    font-family: 'Dosis', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffff;
+}
+
+footer a {
+    font-family: 'Dosis', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: 400ms;
+}
+
+footer a:hover {
+    color: #DD001B;
+}
+
+.footerLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 15px;
+}
+
+.footerLeftContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 15px;
+}
+
+.footerRight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 15px;
+}
+
+.footerPhoneContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.footerPhoneContent p {
+    margin: 0;
+}
+
+.footerHrContainer {
+    background-color: #272727;
+    padding: 25px 120px;
+}
+
+.footerHr {
+    border: 1px solid #FFFFFF;
+}
+
+.finalFooter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 120px;
+    background-color: #272727;
+}
+
+.finalFooter a {
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 14px;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: 400ms;
+}
+
+.finalFooter a:hover {
+    color: #DD001B;
+}
+
+.finalFooterIcons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+
+
+/* ---------------------------------------------------------------- */
+/* ABOUT US PAGE  */
+
+.aboutUsContainer {
+    padding: 30px 120px;
+    background-color: #F0F0F0;
+}
+
+
+.aboutUsImg {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.aboutUsContainer img {
+    height: 350px;
+    margin: 30px 0px;
+}
+
+.aboutUsContainer h3 {
+    font-family: 'raleway';
+    font-size: 35px;
+    font-weight: 700;
+    color: #DD001B;
+    text-align: center;
+}
+
+.aboutUsSecondContainer {
+    background-color: #fff;
+    padding: 30px 120px;
+}
+
+.aboutUsSecondContainer p {
+    margin: 30px 0px !important;
+    font-family: 'raleway';
+    font-size: 16px;
+    font-weight: 400;
+    color: #272727;
+}
+
+.aboutUsSecondContainer h4 {
+    margin: 0px !important;
+    font-family: 'raleway';
+    font-size: 25px;
+    font-weight: 500;
+    color: #DD001B;
+}
+
+.aboutUsThirdContainer {
+    background-color: #F0F0F0;
+}
+
+.aboutUsThirdContainerContent {
+    padding: 30px 120px;
+    text-align: center;
+}
+
+.aboutUsThirdContainerContent p {
+    margin: 30px 0px !important;
+    font-family: 'raleway';
+    font-size: 16px;
+    font-weight: 400;
+    color: #DD001B;
+}
+
+
+/* ---------------------------------------------------------------- */
+/* CONTACT US PAGE  */
+
+.contatUsContainer {
+    padding: 30px 120px;
+    background-color: #F0F0F0;
+}
+
+.contactUsImg {
+    display: flex;
+    justify-content: center;
+}
+
+.contactUsContainer img {
+    height: 350px;
+    margin: 30px 0px;
+    text-align: center;
+}
+
+.contactForm h4 {
+    margin: 0px !important;
+    font-family: 'raleway';
+    font-size: 25px;
+    font-weight: 500;
+    color: #272727;
+}
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 120px;
+    gap: 25px;
+    background-color: #F0F0F0;
+}
+
+.contactForm input {
+    width: 300px;
+    height: 30px;
+    border: 2px solid #DD001B;
+    border-radius: 30px;
+    margin: 0px !important;
+    font-family: 'raleway';
+    font-size: 14px;
+    font-weight: 500;
+    color: #272727;
+    padding: 10px;
+
+}
+
+.contactForm textarea {
+    padding: 10px;
+    width: 300px;
+    border: 2px solid #DD001B;
+    border-radius: 30px;
+    margin: 0px !important;
+    font-family: 'raleway';
+    font-size: 14px;
+    font-weight: 500;
+    color: #272727;
+}
+
+.contactForm input::placeholder,
+.contactForm textarea::placeholder {
+    text-align: center;
+    font-size: 14px;
+}
+
+.contactForm button {
+    font-family: 'raleway';
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #272727;
+    padding: 10px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.contactUsParag {
+    padding: 30px 120px;
+}
+
+.contactUsParag p {
+    margin: 0px !important;
+    font-family: 'raleway';
+    font-size: 18px;
+    font-weight: 500;
+    color: #DD001B;
+    text-align: center;
+}
+
+.contactUsDetails {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 30px 120px;
+}
+
+.contactUsDetails h4 {
+    margin: 0px !important;
+    font-family: 'raleway';
+    font-size: 25px;
+    font-weight: 500;
+    color: #272727;
+}
+
+.contactUsDetails p,
+.contactUsDetails a {
+    margin: 0px !important;
+    font-family: 'raleway';
+    font-size: 16px;
+    font-weight: 400;
+    color: #DD001B;
+    text-decoration: none;
+}
+
+.contactDetailsPhones {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+/* CARPOOL PAGE  */
+
+.carpoolPageContainer img {
+    width: 100%;
+    height: 300px;
+    opacity: 75%;
+    position: relative;
+    z-index: -1;
+}
+
+.carpoolPageContainerTop {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.carpoolPageContainer h1 {
+    font-family: 'raleway';
+    font-size: 40px;
+    color: #DD001B;
+}
+
+.carpoolPageContainer p {
+    font-family: 'raleway';
+    font-size: 16px;
+    font-weight: 400;
+    color: #DD001B;
+}
+
+.carpoolPageContent {
+    display: flex;
+    font-family: 'raleway';
+    width: 75%;
+    margin: auto;
+    margin-top: -75px !important;
+    margin-bottom: 75px !important;
+    box-shadow: 8px 8px 7px -5px rgba(0, 0, 0, 0.59);
+    z-index: 999;
+}
+
+.carpoolPageLeft {
+    width: 40%;
+    background-color: #272727;
+    padding: 50px;
+    display: flex;
+}
+
+.carpoolPageLeft h2 {
+    text-align: center;
+    color: #DD001B;
+    font-size: 30px;
+}
+
+.carpoolPageLeft p {
+    color: #ffff;
+}
+
+.carpoolPageLeftContent {
+    border: 2px dashed #ffff;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.carpoolPageRight {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+}
+
+.carpoolPageRight h2 {
+    text-align: center;
+    margin-top: 75px !important;
+    margin-bottom: 35px !important;
+    font-size: 30px;
+}
+
+.carpoolPageRight input {
+    margin-bottom: 35px;
+    width: 100%;
+}
+
+.carpoolPageRight label {
+    margin-bottom: 5px;
+}
+
+.carpoolForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carpoolForm button {
+    color: #fff;
+    background-color: #272727;
+    width: 250px;
+    padding: 7px;
+    border-radius: 50px;
+    margin-bottom: 75px;
+    cursor: pointer;
+}
+
+.tripContainer {
+    margin-bottom: 35px;
+}
+
+.oneWayButton {
+    font-family: 'raleway';
+    text-decoration: none;
+    background-color: #272727;
+    color: #fff;
+    padding: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.roundTripButton {
+    font-family: 'raleway';
+    text-decoration: none;
+    background-color: #fff;
+    color: black;
+    padding: 10px;
+    border-radius: 50px;
+    border: 1px solid #272727;
+    cursor: pointer;
+}
+
+.calendarContainer {
+    display: flex;
+    margin-bottom: 35px;
+}
+
+
+#comeBackContainer {
+    display: none;
+}
+
+/* ----------------------------------------------------------------------------- 
+MEDIA QUERIES*/
+
+
+@media screen and (max-width: 1024px) {
+
+    .ourServicesDataImgcontainer {
+        text-align: center;
+
+    }
+
+    .ourServicesDataImgcontainer img {
+        margin-bottom: 15px;
+    }
+
+    .ourServicesData p {
+        margin-bottom: 15px !important;
+    }
+
+    .ourServicesDataContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+}
+
+/* ----------------------------------------------------------------------------- 
+MEDIA QUERIES*/
+
+
+@media screen and (max-width: 768px) {
+
+    .topNavContent {
+        padding: 0px 50px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .mainNavContent {
+        padding: 10px 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .landingPage {
+        padding: 0px 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .landingPage h1 {
+        font-family: 'raleway';
+        font-size: 30px;
+        font-weight: 800;
+        color: #DD001B;
+        margin: 30px 0px 5px 0px !important;
+    }
+
+    .landingPage h2 {
+        font-family: 'raleway';
+        font-size: 30px;
+        font-weight: 600;
+        color: #DD001B;
+        margin-bottom: 5px !important;
+    }
+
+    .landingPage a {
+        font-family: 'raleway';
+        font-size: 16px;
+        font-weight: 600;
+        color: #ffff;
+        background-color: #DD001B;
+        padding: 10px 20px;
+        border-radius: 40px;
+        text-decoration: none;
+        transition: 400ms;
+    }
+
+    .landingPage a:hover {
+        font-size: 18px;
+    }
+
+    .landingPageHr {
+        padding: 0 50px;
+    }
+
+    .ourServicesContainer {
+        padding: 0px 35px;
+    }
+
+    .ourServicesContainer h3 {
+        font-family: 'raleway';
+        font-size: 20px;
+        font-weight: 700;
+        color: #DD001B;
+        margin: 30px 0px !important;
+        text-align: center;
+    }
+
+    .ourServicesData {
+        display: flex;
+        flex-direction: column;
+        padding: 0px 25px;
+    }
+
+    .carpoolService {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+
+    .carpoolService img {
+        height: 350px;
+    }
+
+    .carpoolService p {
+        margin: 0px !important;
+        font-size: 16px;
+        font-family: 'raleway';
+        color: #272727;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    .carpoolingSpan1 {
+        font-weight: bold;
+    }
+
+    .carpoolingSpan2 {
+        color: #DD001B;
+    }
+
+    .carpoolingSpan3 {
+        color: #1c9010;
+    }
+
+    #carpoolGetInTouch {
+        margin-top: 15px !important;
+        margin-bottom: 15px !important;
+        color: #DD001B;
+        font-size: 21px;
+        text-align: center;
+        display: none;
+    }
+
+    .carpoolService a {
+        display: block;
+        font-family: 'raleway';
+        font-size: 14px;
+        font-weight: 600;
+        color: #ffff;
+        background-color: #DD001B;
+        padding: 10px 20px;
+        border-radius: 40px;
+        text-decoration: none;
+        transition: 400ms;
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .carpoolService a:hover {
+        font-size: 18px;
+    }
+
+    .whatWeOfferContent {
+        padding: 25px 50px;
+        text-align: center;
+    }
+
+
+    .goComeBackContainer {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .goComeBackService {
+        text-align: center;
+    }
+
+    #date {
+        width: fit-content;
+        margin: auto;
+    }
+
+    .dateTimeContainer {
+        margin-top: 15px;
+        justify-content: center;
+    }
+
+    .dateTimeContainerAr {
+        align-items: center;
+    }
+
+    .goComeBackBtnDesk {
+        display: none;
+    }
+
+    .goComeBackBtnMob {
+        display: block;
+    }
+
+    .goComeBackBtn {
+        width: 100%;
+        padding: 7px 0px;
+    }
+
+    .goComeBackText {
+        padding: 0px !important;
+    }
+
+    .goComeBackTextAr {
+        align-items: center;
+    }
+
+    .goComeBackText p {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .goComeBackTextAr p {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    #goComeBackTitle {
+        font-size: 20px;
+        text-align: center;
+        margin-top: 30px !important;
+    }
+
+    .chooseDay {
+        font-size: 16px;
+    }
+
+    .whatsappSection {
+        padding: 0;
+    }
+
+    .whatsappSectionAr {
+        text-align: center;
+    }
+
+    #whatsappSectionTitle {
+        font-size: 20px;
+    }
+
+    #whatsappSectionTitleAr {
+        text-align: center;
+    }
+
+
+    .whatsappSection p {
+        font-size: 16px;
+    }
+
+    .whatsappSectionBtn {
+        width: 100%;
+        padding: 7px 0px;
+    }
+
+
+
+    .whatWeOfferContent h4 {
+        margin: 0px !important;
+        font-family: 'raleway';
+        font-size: 20px;
+        font-weight: 500;
+        color: #DD001B;
+        margin-bottom: 15px !important;
+    }
+
+
+
+    .appContent {
+        padding: 15px 50px;
+    }
+
+    .appContentTitle {
+        font-family: 'raleway';
+        font-size: 16px;
+        color: #DD001B;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .appContentApplicationLeft {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #272727;
+        padding: 60px 15px;
+        border: 2PX solid #DD001B;
+    }
+
+    .appContentApplicationLeft p {
+        font-family: 'raleway';
+        font-size: 20px;
+        color: #ffff;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .appContentApplicationRight img {
+        height: 450px;
+    }
+
+
+
+    .mainFeaturesContent {
+        padding: 0px 60px 25px;
+    }
+
+    .mainFeaturesContent h4 {
+        margin: 0px !important;
+        font-family: 'raleway';
+        font-size: 20px;
+        font-weight: 500;
+        color: #272727;
+        text-align: center;
+        /* margin-bottom: 30px !important; */
+    }
+
+    .mainFeaturesContent h3 {
+        font-family: 'raleway';
+        font-size: 25px;
+        font-weight: 700;
+        color: #DD001B;
+        margin: 0px 0px 25px 0px !important;
+        text-align: center;
+    }
+
+    .mainFeaturesBigContent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mainFeaturesBigContentLeft {
+        text-align: center;
+    }
+
+    .mainFeaturesBigContentLeft img {
+        width: 65%;
+        transform: rotate(50deg);
+    }
+
+    .mainFeaturesBigContentRightContent img {
+        margin-right: 0px;
+    }
+
+
+
+
+    .assistanceSectionContainer {
+        padding: 25px 60px;
+        background-color: #F0F0F0;
+    }
+
+    .assistanceSectionContent h3 {
+        font-family: 'raleway';
+        font-size: 25px;
+        font-weight: 700;
+        color: #DD001B;
+        margin: 0px 0px 15px 0px !important;
+        text-align: center;
+    }
+
+
+
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 25px 60px;
+        background-color: #272727;
+    }
+
+    .footerLeft {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 15px;
+        padding-bottom: 50px;
+    }
+
+    .footerRight {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 15px;
+    }
+
+    .footerHrContainer {
+        background-color: #272727;
+        padding: 25px 60px;
+    }
+
+    .finalFooter {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 60px;
+        background-color: #272727;
+    }
+
+    .carpoolPageContainerTop {
+        top: 50%;
+    }
+
+    .carpoolPageContainer h1 {
+        font-size: 30px;
+    }
+
+    .carpoolPageContainer p {
+        font-size: 14px;
+    }
+
+    .carpoolPageContent {
+        display: flex;
+        width: 98%;
+        margin-top: 0 !important;
+        margin-bottom: 50px !important;
+    }
+
+
+    .carpoolPageLeft h2 {
+        font-size: 25px;
+    }
+
+
+    .carpoolPageRight h2 {
+        margin-top: 50px !important;
+        font-size: 25px;
+    }
+
+    .carpoolPageRight input {
+        margin-bottom: 25px;
+    }
+
+    .carpoolPageRight label {
+        margin-bottom: 5px;
+    }
+
+
+}
+
+
+/* ----------------------------------------------------------------------------- 
+MEDIA QUERIES*/
+
+
+@media screen and (max-width: 600px) {
+
+    .carpoolPageContent {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .carpoolPageLeft {
+        width: 100%;
+        padding: 1px;
+    }
+
+    .carpoolPageRight {
+        width: 100%;
+    }
+
+    .topNavContent {
+        display: none;
+    }
+
+    .overlay {
+        display: block;
+    }
+
+    .mainNavBurger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .mainNavContent {
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #F0F0F0;
+    }
+
+    .mainNavLinks {
+        display: none;
+    }
+
+    .mobileSecondNav {
+        padding: 0px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background-color: #272727;
+    }
+
+    .mobileSecondNav a,
+    p {
+        margin-right: 10px;
+        color: #ffff;
+        text-decoration: none;
+        transition: 400ms;
+    }
+
+
+
+    .landingPage {
+        padding: 0px 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .landingPage img {
+        width: 300px;
+    }
+
+    .landingPage h1 {
+        font-family: 'raleway';
+        font-size: 20px;
+        font-weight: 800;
+        color: #DD001B;
+        margin: 15px 0px 5px 0px !important;
+        text-align: center;
+    }
+
+    .landingPage h2 {
+        font-family: 'raleway';
+        font-size: 20px;
+        font-weight: 600;
+        color: #DD001B;
+        margin-bottom: 5px !important;
+        text-align: center;
+
+    }
+
+    .landingPage a {
+        font-family: 'raleway';
+        font-size: 14px;
+        font-weight: 600;
+        color: #ffff;
+        background-color: #DD001B;
+        padding: 5px 10px;
+        border-radius: 40px;
+        text-decoration: none;
+        transition: 400ms;
+    }
+
+    .landingPage a:hover {
+        font-size: 16px;
+    }
+
+    .landingPageHr {
+        padding: 0 15px;
+    }
+
+    .ourServicesContainer {
+        padding: 0px 15px;
+    }
+
+    .ourServicesContainer h3 {
+        font-family: 'raleway';
+        font-size: 20px;
+        font-weight: 700;
+        color: #DD001B;
+        margin: 15px 0px !important;
+        text-align: center;
+    }
+
+    .ourServicesData {
+        display: flex;
+        flex-direction: column;
+        padding: 0px 15px;
+    }
+
+    .ourServicesDataImgcontainer img {
+        width: 100%;
+    }
+
+    .carpoolService img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .whatWeOfferContent {
+        padding: 15px 30px;
+        text-align: center;
+    }
+
+    .goComeBackImg img {
+        width: 100%;
+    }
+
+    .whatWeOfferContent h4 {
+        margin: 0px !important;
+        font-family: 'raleway';
+        font-size: 18px;
+        font-weight: 500;
+        color: #DD001B;
+        margin-bottom: 15px !important;
+    }
+
+
+
+    .appContent {
+        padding: 15px 30px;
+    }
+
+    .appContentTitle {
+        font-family: 'raleway';
+        font-size: 14px;
+        color: #DD001B;
+        font-weight: 700;
+        text-align: center;
+        margin: 0px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .appContentApplicationLeft {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #272727;
+        padding: 30px 15px;
+        border: 2PX solid #DD001B;
+    }
+
+    .appContentApplicationLeft p {
+        font-family: 'raleway';
+        font-size: 16px;
+        color: #ffff;
+        font-weight: 700;
+        text-align: center;
+        margin: 0px !important;
+    }
+
+    .appContentApplicationLeft img {
+        max-width: 165px;
+    }
+
+    .appContentApplicationRight img {
+        max-width: 150px;
+        height: 350px;
+    }
+
+
+
+    .mainFeaturesContent {
+        padding: 0px 30px 15px;
+    }
+
+    .mainFeaturesContent h4 {
+        margin: 0px !important;
+        font-family: 'raleway';
+        font-size: 18px;
+        font-weight: 500;
+        color: #272727;
+        text-align: center;
+        /* margin-bottom: 30px !important; */
+    }
+
+    .mainFeaturesContent h3 {
+        font-family: 'raleway';
+        font-size: 20px;
+        font-weight: 700;
+        color: #DD001B;
+        margin: 0px 0px 15px 0px !important;
+        text-align: center;
+    }
+
+    .mainFeaturesBigContent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mainFeaturesBigContentLeft {
+        text-align: center;
+    }
+
+    .mainFeaturesBigContentLeft img {
+        width: 50%;
+        transform: rotate(50deg);
+    }
+
+    .mainFeaturesBigContentRightContent img {
+        margin-right: 0px;
+    }
+
+
+
+
+    .assistanceSectionContainer {
+        padding: 15px 30px;
+        background-color: #F0F0F0;
+    }
+
+    .assistanceSectionContent h3 {
+        font-family: 'raleway';
+        font-size: 20px;
+        font-weight: 700;
+        color: #DD001B;
+        margin: 0px 0px 15px 0px !important;
+        text-align: center;
+    }
+
+
+
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 15px 30px;
+        background-color: #272727;
+    }
+
+    .footerLeft {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 15px;
+        padding-bottom: 30px;
+    }
+
+    .footerRight {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 15px;
+    }
+
+    .footerPhoneContent a {
+        font-size: 10px;
+    }
+
+    .footerHrContainer {
+        background-color: #272727;
+        padding: 15px 30px;
+    }
+
+    .finalFooter {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 30px;
+        background-color: #272727;
+    }
+
+
+
+    /* ABOUT US PAGE  */
+
+    .aboutUsContainer {
+        padding: 15px 30px;
+        background-color: #F0F0F0;
+    }
+
+
+    .aboutUsImg {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+
+    .aboutUsContainer img {
+        height: 250px;
+        margin: 15px 0px;
+        width: 100%;
+    }
+
+    .aboutUsContainer h3 {
+        font-family: 'raleway';
+        font-size: 25px;
+        font-weight: 700;
+        color: #DD001B;
+        text-align: center;
+    }
+
+    .aboutUsContainer p {
+        margin: 15px 0px !important;
+        font-family: 'raleway';
+        font-size: 14px;
+        font-weight: 400;
+        color: #272727;
+    }
+
+    .aboutUsSecondContainer {
+        background-color: #fff;
+        padding: 15px 30px;
+    }
+
+    .aboutUsSecondContainer p {
+        margin: 15px 0px !important;
+        font-family: 'raleway';
+        font-size: 14px;
+        font-weight: 400;
+        color: #272727;
+    }
+
+    .aboutUsSecondContainer h4 {
+        margin: 0px !important;
+        font-family: 'raleway';
+        font-size: 20px;
+        font-weight: 500;
+        color: #DD001B;
+    }
+
+    .aboutUsThirdContainer {
+        background-color: #F0F0F0;
+    }
+
+    .aboutUsThirdContainerContent {
+        padding: 15px 30px;
+        text-align: center;
+    }
+
+    .aboutUsThirdContainerContent p {
+        margin: 15px 0px !important;
+        font-family: 'raleway';
+        font-size: 14px;
+        font-weight: 400;
+        color: #DD001B;
+    }
+
+
+
+
+
+    /* CONTACT US PAGE  */
+
+    .contatUsContainer {
+        padding: 15px 30px;
+        background-color: #F0F0F0;
+    }
+
+    .contactUsImg {
+        display: flex;
+        justify-content: center;
+    }
+
+    .contactUsContainer img {
+        height: 250px;
+        margin: 15px 0px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .contactForm h4 {
+        margin: 0px !important;
+        font-family: 'raleway';
+        font-size: 20px;
+        font-weight: 500;
+        color: #272727;
+    }
+
+    .contactForm {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 30px;
+        gap: 15px;
+        background-color: #F0F0F0;
+    }
+
+    .contactForm input {
+        width: 250px;
+        height: 15px;
+        border: 2px solid #DD001B;
+        border-radius: 30px;
+        margin: 0px !important;
+        font-family: 'raleway';
+        font-size: 14px;
+        font-weight: 500;
+        color: #272727;
+        padding: 10px;
+
+    }
+
+    .contactForm textarea {
+        padding: 10px;
+        width: 250px;
+        border: 2px solid #DD001B;
+        border-radius: 30px;
+        margin: 0px !important;
+        font-family: 'raleway';
+        font-size: 14px;
+        font-weight: 500;
+        color: #272727;
+    }
+
+    .contactForm input::placeholder,
+    .contactForm textarea::placeholder {
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .contactForm button {
+        font-family: 'raleway';
+        font-size: 16px;
+        font-weight: 500;
+        color: #fff;
+        background-color: #272727;
+        padding: 10px 25px;
+        border-radius: 30px;
+        cursor: pointer;
+    }
+
+    .contactUsParag {
+        padding: 15px 30px;
+    }
+
+    .contactUsParag p {
+        margin: 0px !important;
+        font-family: 'raleway';
+        font-size: 18px;
+        font-weight: 500;
+        color: #DD001B;
+        text-align: center;
+    }
+
+    .contactUsDetails {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 15px 30px;
+    }
+
+    .contactUsDetails h4 {
+        margin: 0px !important;
+        font-family: 'raleway';
+        font-size: 16px;
+        font-weight: 500;
+        color: #272727;
+    }
+
+    .contactUsDetails p,
+    .contactUsDetails a {
+        margin: 0px !important;
+        font-family: 'raleway';
+        font-size: 14px;
+        font-weight: 400;
+        color: #DD001B;
+        text-decoration: none;
+    }
+
+    .contactDetailsPhones {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+
+
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .carpoolPageContainerTop {
+        top: 55%;
+    }
+
+}
